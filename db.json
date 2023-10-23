@@ -1,0 +1,19 @@
+{
+  "movies": [
+    {
+      "id": 1,
+      "title": "Bee Movie",
+      "rate": "5"
+    },
+    {
+      "title": "A morte do demonio ",
+      "rate": "2",
+      "id": 2
+    },
+    {
+      "title": "barbie",
+      "rate": "3",
+      "id": 3
+    }
+  ]
+}
