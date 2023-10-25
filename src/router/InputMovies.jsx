@@ -1,9 +1,11 @@
 import { useState } from "react";
 import InputTitle from "../components/InputTitle";
 import SelectStar from "../components/SelectStar";
+import { useNavigate } from "react-router-dom"
 
 const InputMovies = () => {
   const [formData, setFormData] = useState({ title: "", rate: "" });
+  const navigate = useNavigate()
 
   const handleAdd = () => {
     if (formData.title && formData.rate) {
@@ -14,6 +16,7 @@ const InputMovies = () => {
       };
       fetch("http://localhost:3000/movies", requestOptions);
     }
+    return navigate("/")
   };
 
   return (

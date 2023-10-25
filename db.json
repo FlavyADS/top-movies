@@ -24,6 +24,11 @@
       "title": "breakfast at tiffanys",
       "rate": "5",
       "id": 5
+    },
+    {
+      "title": "Mulan ",
+      "rate": "5",
+      "id": 6
     }
   ]
 }

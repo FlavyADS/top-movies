@@ -1,6 +1,6 @@
 import React from "react";
 import ButtonHome from "./ButtonHome";
-import ButtonCadastro from "./ButtonCadastro";
+import ButtonCadastro from "./ButtonRotaCadastro";
 
 const Header = () => {
   return (

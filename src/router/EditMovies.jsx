@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import InputTitle from "../components/InputTitle";
 import SelectStar from "../components/SelectStar";
 
 const EditMovies = () => {
   const { id } = useParams();
+  const navigate = useNavigate()
   const [movies, setMovies] = useState([]);
 
   useEffect(() => {
@@ -27,6 +28,7 @@ const EditMovies = () => {
       fetch(`http://localhost:3000/movies/${id}`, requestOptions);
       // se gravou redirecionar para home com a lista
     }
+    return navigate("/")
   };
 
   return (
