@@ -2,18 +2,28 @@
   "movies": [
     {
       "id": 1,
-      "title": "Bee Movie",
+      "title": "Beee Movie",
       "rate": "5"
     },
     {
-      "title": "A morte do demonio ",
-      "rate": "2",
+      "title": "A morte do demônio",
+      "rate": "4",
       "id": 2
     },
     {
-      "title": "barbie",
-      "rate": "3",
+      "title": "barbieee",
+      "rate": "1",
       "id": 3
+    },
+    {
+      "title": "cavaleiros do zodiaco",
+      "rate": "2",
+      "id": 4
+    },
+    {
+      "title": "breakfast at tiffanys",
+      "rate": "5",
+      "id": 5
     }
   ]
 }

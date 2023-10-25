@@ -1,6 +1,5 @@
-
-import React, { useEffect, useState } from "react"
-import { Link } from "react-router-dom"
+import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 const ListMovies = () => {
   const [movies, setMovies] = useState([]);
@@ -21,28 +20,33 @@ const ListMovies = () => {
 
   function getStar(numero) {
     switch (numero) {
-      case "1": 
-        return <>&#11088;</>
+      case "1":
+        return <>&#11088;</>;
       case "2":
-        return <>&#11088;&#11088;</>
+        return <>&#11088;&#11088;</>;
+      case "3":
+        return <>&#11088;&#11088;&#11088;</>;
+      case "4":
+        return <>&#11088;&#11088;&#11088;&#11088;</>;
+      case "5":
+        return <>&#11088;&#11088;&#11088;&#11088;&#11088;</>;
     }
   }
-
 
   return (
     ///table - tr
     <div>
       {movies.map((movie) => (
         <li key={movie.id}>
-          {movie.title} --
+          {movie.title}
           {getStar(movie.rate)}
-            <button>
+          <button>
             <Link to={`/editarFilme/${movie.id}`}>Editar</Link>
-            </button>
-        <button onClick={() => deleteMovie(movie.id)}>deletar</button>
+          </button>
+          <button onClick={() => deleteMovie(movie.id)}>deletar</button>
         </li>
       ))}
-    </div> 
+    </div>
   );
 };
 
