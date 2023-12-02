@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App.jsx";
-import "./index.css";
+import "./main.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import InputMovies from "./router/InputMovies.jsx";
 import ListMovies from "./router/ListMovies.jsx";
@@ -25,7 +25,7 @@ const router = createBrowserRouter([
         path: "cadastrarFilme",
         element: <InputMovies />,
       },
-      {
+      { 
         path: "editarFilme",
         element: <EditMovies />,
       },

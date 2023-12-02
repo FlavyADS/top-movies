@@ -5,7 +5,7 @@ import SelectStar from "../components/SelectStar";
 
 const EditMovies = () => {
   const { id } = useParams();
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   const [movies, setMovies] = useState([]);
 
   useEffect(() => {
@@ -26,13 +26,12 @@ const EditMovies = () => {
       };
 
       fetch(`http://localhost:3000/movies/${id}`, requestOptions);
-      // se gravou redirecionar para home com a lista
     }
-    return navigate("/")
+    return navigate("/");
   };
 
   return (
-    <div>
+    <div className="flex flex-col w-2/3 gap-4 justify-center items-center">
       <InputTitle
         type="text"
         value={movies.title}
@@ -42,7 +41,14 @@ const EditMovies = () => {
         value={movies.rate}
         onChange={(e) => setMovies({ ...movies, rate: e.target.value })}
       />
-      <button onClick={handleChange}>Adicionar</button>
+
+      <button
+        className="w-2/3 text-zinc-300 bg-[#0B1C47]/90 m-8 py-4
+       rounded-3xl font-dm font-semibold text-xl"
+        onClick={handleChange}
+      >
+        Salvar edição
+      </button>
     </div>
   );
 };
